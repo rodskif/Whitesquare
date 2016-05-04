@@ -6,7 +6,14 @@
 	<title>Whitesquare</title>
 	<link rel="stylesheet" href="styles.css" type="text/css">
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300" type="text/css">
-
+	
+	<!-- Здесь мы указываем, что используем разметку HTML5, кодировку utf-8, страница называется Whitesquare. 
+	Также подключаем наш файл стилей и внешний файл со стилями шрифтов.
+	В последнем блоке в секции head мы подключаем специальный скрипт, 
+	который позволяет поддерживать Html5 теги в браузерах Internet Explorer меньше 9 версии. 
+	Мета-тег X-UA-Compatible сообщает, что в случае использования браузера Internet Explorer, 
+	он должен отразить сайт самым современным способом. -->
+	
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -16,10 +23,11 @@
 	<div id="wrapper">
 		<header>
 			<a href="/"><img src="img/logo.png" alt="logo"></a>
-			<form name="search" action="#" method="get">
+			<form name="search" action="#" method="get">  <!-- Вставляем форму поиска в тег header: -->
 				<input type="text" name="q" placeholder="Search"><button type="submit">GO</button>
 			</form>
 		</header>
+		<!-- Для отображения меню необходимо создать список со ссылками внутри тега nav: -->
 		<nav>
 			<ul class="top-menu">
 				<li><a href="/home/">HOME</a></li>
@@ -32,9 +40,11 @@
 				<li><a href="/contact/">CONTACT</a></li>
 			</ul>
 		</nav>
+		<!-- Заголовок -->
 		<div id="heading">
 			<h1>ABOUT US</h1>
 		</div>
+		<!-- Колонки -->
 		<aside>
 			<nav>
 				<ul class="aside-menu">
@@ -46,16 +56,19 @@
 					<li><a href="/cras/">CRAS ET NISI VITAE ODIO</a></li>
 				</ul>
 			</nav>
+			<!-- Контент сайдбара -->
 			<h2>OUR OFFICES</h2>
 			<p><img src="img/sample.png" width="230" height="180" alt="Our offices"></p>
 		</aside>
 		<section>
+		<!-- Цитата -->
 			<blockquote>
 				<p>
 					"QUISQUE IN ENIM VELIT, AT DIGNISSIM EST. NULLA UL CORPER, DOLOR AC PELLENTESQUE PLACERAT, JUSTO TELLUS GRAVIDA ERAT, VEL PORTTITOR LIBERO ERAT."
 				</p>
 				<cite>John Doe, Lorem Ipsum</cite>
 			</blockquote>
+			<!-- Контент -->
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non neque ac sem accumsan rhoncus ut ut turpis. In hac habitasse platea dictumst. 
 				Proin eget nisi erat, et feugiat arcu. Duis semper porttitor lectus, ac pharetra erat imperdiet nec. Morbi interdum felis nulla. 
 				Aenean eros orci, pellentesque sed egestas vitae, auctor aliquam nisi. Nulla nec libero eget sem rutrum iaculis. Quisque in enim velit, at dignissim est. 
@@ -80,7 +93,10 @@
 			<figure>
 				<img src="img/sample.png" width="320" height="175" alt="">
 			</figure>
+			<!-- Блок «Our team» -->
+			<!-- При верстке этого блока добавим сначала заголовок: -->
 			<h2>OUR TEAM</h2>
+			<!-- А затем два блока-строки с карточками сотрудников -->
 			<div class="team-row">
 				<figure>
 					<img src="img/sample.png" width="96" height="96" alt="">
@@ -125,11 +141,14 @@
 					<figcaption>Darryl Brunton<span>ui designer</span></figcaption>
 				</figure>
 			</div>
+			<!-- Таким образом, карточка (figure) состоит из фотографии (img), подписи (figcaption) с именем сотрудника и его должностью (span) -->
 		</section>
 	</div>
+	<!-- Футер -->
+	<!-- Футер состоит из четырёх больших блоков: ленты Твиттера, карты сайта, социальных ссылок и логотипа с копирайтом. -->
 	<footer>
 		<div id="footer">
-			<div id="twitter">
+			<div id="twitter"> <!-- Лента Твиттера -->
 				<h3>TWITTER FEED</h3>
 				<time datetime="2012-10-23"><a href="#">23 oct</a></time>
 				<p>
@@ -137,8 +156,9 @@
 					In eget mi dui, sit amet scelerisque nunc. Aenean aug
 				</p>
 			</div> 
-			<div id="sitemap">
+			<div id="sitemap"> <!-- Карта сайта -->
 				<h3>SITEMAP</h3>
+				<!-- Карта сайта представляет собой два блока со ссылками: -->
 				<div>
 					<a href="/home/">Home</a>
 					<a href="/about/">About</a>
@@ -150,7 +170,10 @@
 					<a href="/contact/">Contact</a>
 				</div>
 			</div>
-			<div id="social">
+			<!-- Иконки социальных сетей с одинаковыми размерами удобно сохранить в один файл и использовать как спрайты для более быстрой загрузки. 
+			Для этого можно склеить картинки вручную в Photoshop, а можно сначала нарезать по одной, а затем склеить с помощью специально сервиса, 
+			например http://ru.spritegen.website-performance.org. -->
+			<div id="social"> <!-- Социальные ссылки -->
 				<h3>SOCIAL NETWORKS</h3>
 				<a href="http://twitter.com/" class="social-icon twitter"></a>
 				<a href="http://facebook.com/" class="social-icon facebook"></a>
@@ -161,7 +184,8 @@
 				<a href="http://instagram.com/" class="social-icon-small instagram"></a>
 				<a href="/rss/" class="social-icon-small rss"></a>
 			</div>
-			<div id="footer-logo">
+			<div id="footer-logo"> <!-- Копирайт -->
+			<!-- Блок с копирайтом и логотипом – это картинка со ссылкой и параграф с текстом под ним. -->
 				<a href="/"><img src="img/footer_logo.png" alt="logo"></a>
 				<p>Copyright &copy 2012 Whitesquare. A <a href="http://pcklab.com">pcklab</a> creation</p>
 			</div>
